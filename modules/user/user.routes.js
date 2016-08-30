@@ -24,7 +24,6 @@ module.exports = function() {
            User.updateById(req, res, next);
         });
 
-
     return router;
 };
 

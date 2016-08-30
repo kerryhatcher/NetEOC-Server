@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var session = require('express-session');
 const mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
 var User = require('./modules/user/user.model.js');
 
 
