@@ -15,7 +15,7 @@ deployment:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
       - docker build -t  neteoc/neteoc-server:latest .
       - docker push neteoc/neteoc-server:latest
-      - curl -v -X POST https://circleci.com/api/v1/project/kerryhatcher/NetEOC-UI/tree/master?circle-token=$CIRCLE_TOKEN
+      - cd ./scripts/ && ./upgrade.sh
 
 
 #notify:
