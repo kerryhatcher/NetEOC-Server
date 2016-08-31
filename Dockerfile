@@ -1,6 +1,6 @@
 # Node.js app Docker file
 
-FROM kerryhatcher/neteoc-ui:latest
+FROM neteoc/neteoc-ui:latest
 
 WORKDIR /opt/neteoc-server
 
