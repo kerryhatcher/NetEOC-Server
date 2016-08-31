@@ -38,7 +38,7 @@ jspm_packages
 
 
 node_modules
-*compose*
+*compose*.yml
 env.sh
 .idea
 
