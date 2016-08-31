@@ -12,9 +12,9 @@ deployment:
   hub:
     branch: master
     commands:
-      - docker build -t  kerryhatcher/flare-server:latest .
+      - docker build -t  neteoc/neteoc-server:latest .
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push kerryhatcher/flare-server:latest
+      - docker push neteoc/neteoc-server:latest
 
 
 #notify:
