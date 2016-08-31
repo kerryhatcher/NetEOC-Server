@@ -57,6 +57,12 @@ app.use('/twil', AuthTools.denyNotLoggedIn,  require('./modules/twilpub/twilpub.
 app.use('/api/admin', AuthTools.denyNotLoggedIn, require('./modules/admin/admin.routes')(app));
 app.use('/api/org', AuthTools.denyNotLoggedIn, require('./modules/org/org.routes')(app));
 
+
+app.get('/api/status', function(req, res, next){
+  res.send({status: "up"});
+});
+
+
 require('./config/passport')();
 require('./routes')(app, passport, express);
 
