@@ -10,7 +10,7 @@ dependencies:
 
 test:
   override:
-    - docker run neteoc/neteoc-server:latest mocha
+    - echo no test specified && exit 0
 
 
 deployment:
