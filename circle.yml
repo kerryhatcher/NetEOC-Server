@@ -5,13 +5,13 @@ machine:
 dependencies:
   pre:
     - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+    - alias hostip="echo $( ifconfig docker0 | grep "inet addr" | sed -r "s/.*inet addr:([0-9.]*).*$/\1/")"
     - docker build -t  neteoc/neteoc-server:latest .
 
 
 test:
   override:
-    - echo no test specified && exit 0
-
+    - docker run --add-host=dockerhost:$(hostip) neteoc/neteoc-server:dev ./node_modules/mocha/bin/mocha
 
 deployment:
   hub:

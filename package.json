@@ -24,6 +24,7 @@
     "google-libphonenumber": "^1.1.0",
     "jade": "~1.11.0",
     "mailgun-js": "^0.7.12",
+    "mocha": "^3.0.2",
     "moment": "^2.14.1",
     "moment-timezone": "^0.5.5",
     "mongoose": "^4.5.8",
